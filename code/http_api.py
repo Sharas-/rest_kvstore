@@ -40,7 +40,7 @@ class Prefs:
 
 
 app = falcon.API()
-app.add_route('/prefs/{uid}/{pref_key}', Prefs(), suffix='pref')
-app.add_route('/prefs/{uid}', Prefs(), suffix='prefs')
-app.add_route('/prefs', Prefs(), suffix='all')
+app.add_route('/{uid}/{pref_key}', Prefs(), suffix='pref')
+app.add_route('/{uid}', Prefs(), suffix='prefs')
+app.add_route('/', Prefs(), suffix='all')
 
